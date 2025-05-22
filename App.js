@@ -5,7 +5,7 @@ import FavoritesScreen from './src/screens/FavoritesScreen';
 import { fetchAllHeroes } from './src/api/superheroApi';
 
 export default function App() {
-  const [screen, setScreen] = useState('search'); // 'search' o 'favorites'
+  const [screen, setScreen] = useState('search');
   const [search, setSearch] = useState('');
   const [heroes, setHeroes] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -28,6 +28,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#e4eaf0" }}>
+      
       {screen === 'search' ? (
         <HeroSearchScreen
           heroes={heroes}
